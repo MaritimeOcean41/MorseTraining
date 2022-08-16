@@ -1,0 +1,125 @@
+@import url("https://maritimeocean41.github.io/fonts/main.css");
+* {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #22272e;
+  color: #ccc;
+}
+
+header {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+}
+
+header .title {
+  position: absolute;
+  display: block;
+  left: 50%;
+  width: 250px;
+  cursor: default;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 10px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+header .title i {
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
+}
+
+section {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 25px;
+}
+
+section .left {
+  position: absolute;
+  width: 300px;
+  height: 163px;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+section .left a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section .left a .side {
+  background-color: #22272e;
+  display: block;
+  width: 285px;
+  height: 32px;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-left: 15px;
+  border-bottom: 1px solid #888;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+section .left a .side:hover {
+  background-color: #30363d;
+}
+
+section .buttons {
+  position: absolute;
+  left: 50%;
+  width: 620px;
+  height: 400px;
+  margin-top: 50px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+section .buttons .sub {
+  display: block;
+  width: 620px;
+  height: 85px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+section .buttons .sub .title {
+  display: block;
+  text-decoration: none;
+  color: #489be8;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #22272e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+/*# sourceMappingURL=style.css.map */
