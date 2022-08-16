@@ -4,20 +4,27 @@
         <meta charset="UTF-8">
         <title>Morse Training</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="dark.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
-            <div class="back">⮜ Back</div>
+            <div class="buttons">
+                <a href="/MorseTraining" class="btn">Home</a>
+                <a name="checked" href="#" class="btn">Letter</a>
+                <a href="word/" class="btn">Word</a>
+            </div>
             <a class="title"><b>L</b><b>e</b><b>t</b><b>t</b><b>e</b><b>r</b></a>
         </header>
         <section>
-            <div class="main">
+            <div class="container">
                 <a class="letter"></a>
                 <form>
                     <input type="text" class="answer" autofocus><button class="submit" onclick="check()">S</button>
                 </form>
             </div>
+            <div class="gh"><a href="https://github.com/MaritimeOcean41/MorseTraining">Código Fonte ↗️</a></div>
+            <div id="theme"><abbr title="Mudar o tema"><a id="th">☀️</a><a id="ico">⚙️</a></abbr></div>
         </section>
         <script src="script.js"></script>
     </body>

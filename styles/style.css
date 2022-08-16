@@ -4,17 +4,39 @@
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #22272e;
-  color: #ccc;
-}
-
 header {
   position: fixed;
-  top: 10;
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100px;
+}
+
+header .buttons {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  min-width: 200px;
+  height: 100px;
+  vertical-align: middle;
+}
+
+header .buttons .btn {
+  display: inline-block;
+  min-width: 80px;
+  height: 60px;
+  color: #333;
+  margin-top: 20px;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+header .buttons .btn:hover,
+header .buttons .btn[name="checked"] {
+  color: #666;
 }
 
 header .title {
@@ -22,8 +44,10 @@ header .title {
   display: block;
   left: 50%;
   width: 250px;
+  color: #333;
   cursor: default;
-  font-size: 2em;
+  margin-top: 5px;
+  font-size: 1.8em;
   font-weight: 600;
   text-align: center;
   letter-spacing: 10px;
@@ -38,88 +62,80 @@ header .title i {
 
 section {
   position: fixed;
-  top: 80px;
+  top: 100px;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 25px;
-}
-
-section .left {
-  position: absolute;
-  width: 300px;
-  height: 163px;
-  border: 1px solid #888;
-  border-radius: 5px;
-}
-
-section .left a {
-  text-decoration: none;
-  color: #fff;
-}
-
-section .left a .side {
-  background-color: #22272e;
-  display: block;
-  width: 285px;
-  height: 32px;
-  cursor: pointer;
-  padding-top: 8px;
-  padding-left: 15px;
-  border-bottom: 1px solid #888;
-  -webkit-transition: background-color .2s;
-  transition: background-color .2s;
-}
-
-section .left a .side:hover {
-  background-color: #30363d;
 }
 
 section .buttons {
-  position: absolute;
+  position: relative;
   left: 50%;
-  width: 620px;
-  height: 400px;
-  margin-top: 50px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  width: 515px;
+  min-height: 485px;
+  padding: 15px 0 0 15px;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
 }
 
-section .buttons .sub {
+section .buttons span {
   display: block;
-  width: 620px;
-  height: 85px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  border-top: 1px solid #ccc;
-  padding-top: 15px;
+  width: 485px;
+  height: 125px;
+  padding: 15px 0 0 15px;
+  border-bottom: 1px #555 solid;
 }
 
-section .buttons .sub .title {
+section .buttons span .title {
   display: block;
+  color: #333;
   text-decoration: none;
-  color: #489be8;
-  font-size: 1.5em;
-  font-weight: 600;
-  letter-spacing: 6px;
+  font-size: 1.4em;
+  letter-spacing: 5px;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
+section .buttons span .desc {
+  font-size: 1.2em;
+  letter-spacing: 2px;
 }
 
-::-webkit-scrollbar-track {
-  background: #22272e;
+section .buttons span:hover .title {
+  color: #555;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 5px;
+section .gh {
+  position: absolute;
+  left: 20px;
+  bottom: 120px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #444;
+section .gh a {
+  color: #444;
+  text-decoration: none;
+}
+
+section .gh a:hover {
+  color: #666;
+}
+
+section #theme {
+  position: absolute;
+  right: 5px;
+  bottom: 100px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+section #theme a {
+  position: absolute;
+  font-size: 1.8em;
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+          clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+section #theme a#th {
+  -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+          clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
 }
 /*# sourceMappingURL=style.css.map */

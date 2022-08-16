@@ -1,3 +1,4 @@
+let THEME = localStorage.getItem('theme');
 const MORSE = {
     "a": ".-",
     "b": "-...",
@@ -33,4 +34,39 @@ $('b').mouseover(function(e) {
     this.innerHTML = MORSE[this.innerHTML.toLowerCase()]
 }).mouseout(function(e) {
     this.innerHTML = originalTitle
-})
+});
+
+$('#theme').click('click', function(e) {
+    if(THEME === 'light') {
+        $('#th').text('🌑');
+        $('#th').css('rotate', '180deg');
+        $('#ico').css('rotate', '180deg');
+        $('header').addClass('dark');
+        $('section').addClass('dark');
+        localStorage.setItem('theme', 'dark');
+    }
+    if(THEME === 'dark') {
+        $('#th').text('☀️');
+        $('#th').css('rotate', '360deg');
+        $('#ico').css('rotate', '360deg');
+        $('header').removeClass('dark');
+        $('section').removeClass('dark');
+        localStorage.setItem('theme', 'light');
+    } else {
+        localStorage.setItem('theme', 'dark');
+    }
+    THEME = localStorage.getItem('theme');
+    console.log(THEME)
+});
+
+function setTheme() {
+    THEME = localStorage.getItem('theme');
+    if(THEME === 'dark') {
+        $('header').addClass('dark');
+        $('section').addClass('dark');
+    } else if (THEME === 'light') {
+        $('header').removeClass('dark');
+        $('section').removeClass('dark');
+    }
+}
+setTheme();
