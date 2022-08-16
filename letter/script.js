@@ -85,9 +85,15 @@ $('#theme').click('click', function(e) {
 function setTheme() {
     THEME = localStorage.getItem('theme');
     if(THEME === 'dark') {
+        $('#th').text('🌑');
+        $('#th').css('rotate', '180deg');
+        $('#ico').css('rotate', '180deg');
         $('header').addClass('dark');
         $('section').addClass('dark');
     } else if (THEME === 'light') {
+        $('#th').text('☀️');
+        $('#th').css('rotate', '360deg');
+        $('#ico').css('rotate', '360deg');
         $('header').removeClass('dark');
         $('section').removeClass('dark');
     }
