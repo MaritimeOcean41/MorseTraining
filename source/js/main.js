@@ -1,4 +1,5 @@
 let THEME = localStorage.getItem('theme');
+var originalTitle;
 const MORSE = {
     "a": ".-",
     "b": "-...",
@@ -28,7 +29,6 @@ const MORSE = {
     "z": "--..",
 }
 
-var originalTitle = '';
 $('b').mouseover(function(e) {
     originalTitle = this.innerHTML;
     this.innerHTML = MORSE[this.innerHTML.toLowerCase()]
@@ -56,7 +56,6 @@ $('#theme').click('click', function(e) {
         localStorage.setItem('theme', 'dark');
     }
     THEME = localStorage.getItem('theme');
-    console.log(THEME)
 });
 
 function setTheme() {

@@ -1,0 +1,133 @@
+
+header.dark
+{
+    background-color: #232937;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    .buttons
+    {
+        position: absolute;
+        top: 0;
+        left: 25px;
+        min-width: 200px;
+        height: 100px;
+        vertical-align: middle;
+        .btn
+        {
+            display: inline-block;
+            min-width: 80px;
+            height: 60px;
+            color: #ddd;
+            margin-top: 20px;
+            line-height: 60px;
+            text-align: center;
+            text-decoration: none;
+            transition: color .2s;
+        }
+        .btn:hover,
+        .btn[name="checked"]
+        {
+            color: #eee;
+        }
+    }
+    .title
+    {
+        position: absolute;
+        display: block;
+        left: 50%;
+        width: 250px;
+        color: #ddd;
+        cursor: default;
+        margin-top: 5px;
+        font-size: 2.8em;
+        font-weight: 600;
+        line-height: 80px;
+        text-align: center;
+        letter-spacing: 10px;
+        transform: translate(-50%);
+        i
+        {
+            text-decoration-style: none;
+        }
+    }
+}
+section.dark
+{
+    background-color: #232937;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    .container
+    {
+        position: relative;
+        left: 50%;
+        width: 500px;
+        height: 500px;
+        text-align: center;
+        transform: translate(-50%);
+        .letter
+        {
+            display: block;
+            width: 500px;
+            color: #ccc;
+            font-size: 8em;
+            font-weight: 500;
+            margin-top: 50px;
+            text-transform: uppercase;
+        }
+        form
+        {
+            display: block;
+            width: 500px;
+            height: 60px;
+            .answer
+            {
+                background-color: #ddd;
+                width: 300px;
+                height: 60px;
+                outline: none;
+                font-size: 1em;
+                margin-left: -170px;
+                text-align: center;
+                padding-left: 30px;
+                border-style: none;
+                border-radius: 30px;
+                font-family: 'Morse';
+            }
+            .submit
+            {
+                background-color: rgb(9, 113, 211);
+                position: absolute;
+                width: 160px;
+                height: 60px;
+                color: #eee;
+                outline: none;
+                font-size: .5em;
+                margin-left: 5px;
+                border-style: none;
+                border-radius: 30px;
+                font-family: 'Morse';
+            }
+        }
+    }
+    .gh
+    {
+        position: absolute;
+        left: 20px;
+        bottom: 120px;
+        a
+        {
+            color: #eee;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            color: #ccc;
+        }
+    }
+}
