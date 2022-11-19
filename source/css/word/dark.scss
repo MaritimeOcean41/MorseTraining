@@ -53,6 +53,12 @@ header.dark
             text-decoration-style: none;
         }
     }
+    #mto
+    {
+        width: 500px;
+        font-size: 2em;
+        letter-spacing: 6px;
+    }
 }
 section.dark
 {
@@ -66,14 +72,14 @@ section.dark
     {
         position: relative;
         left: 50%;
-        width: 500px;
+        width: 800px;
         height: 500px;
         text-align: center;
         transform: translate(-50%);
         .word
         {
             display: block;
-            width: 500px;
+            width: 800px;
             color: #ccc;
             font-size: 5em;
             font-weight: 500;
@@ -83,7 +89,7 @@ section.dark
         form
         {
             display: block;
-            width: 500px;
+            width: 800px;
             height: 60px;
             .answer
             {

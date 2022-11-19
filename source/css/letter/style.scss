@@ -58,6 +58,12 @@ header
             text-decoration-style: none;
         }
     }
+    #mto
+    {
+        width: 500px;
+        font-size: 2em;
+        letter-spacing: 6px;
+    }
 }
 section
 {
@@ -84,6 +90,12 @@ section
             margin-top: 50px;
             text-transform: uppercase;
         }
+        .letter#mto
+        {
+            margin-bottom: 35px;
+            font-size: 2.2em;
+            font-family: 'Morse';
+        }
         form
         {
             display: block;
@@ -102,6 +114,12 @@ section
                 border-style: none;
                 border-radius: 30px;
                 font-family: 'Morse';
+            }
+            .answer#mto
+            {
+                font-size: 2em;
+                text-transform: uppercase;
+                font-family: 'Poppins', sans-serif;
             }
             .submit
             {

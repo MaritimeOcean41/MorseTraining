@@ -27,6 +27,32 @@ const MORSE = {
     "x": "-..-",
     "y": "-.--",
     "z": "--..",
+    ".-": "a",
+    "-...": "b",
+    "-.-.": "c",
+    "-..": "d",
+    ".": "e",
+    "..-.": "f",
+    "--.": "g",
+    "....": "h",
+    "..": "i",
+    ".---": "j",
+    "-.-": "k",
+    ".-..": "l",
+    "--": "m",
+    "-.": "n",
+    "---": "o",
+    ".--.": "p",
+    "--.-": "q",
+    ".-.": "r",
+    "...": "s",
+    "-": "t",
+    "..-": "u",
+    "...-": "v",
+    ".--": "w",
+    "-..-": "x",
+    "-.--": "y",
+    "--..": "z"
 }
 
 $('b').mouseover(function(e) {
@@ -35,6 +61,9 @@ $('b').mouseover(function(e) {
 }).mouseout(function(e) {
     this.innerHTML = originalTitle
 });
+
+// Disable "autocomplete" in all inputs
+$('.answer').attr('autocomplete', 'off');
 
 $('#theme').click('click', function(e) {
     if(THEME === 'light') {
