@@ -83,7 +83,7 @@ section
         .word
         {
             display: block;
-            width: 800px;
+            min-width: 800px;
             color: #111;
             font-size: 5em;
             font-weight: 500;
@@ -94,8 +94,9 @@ section
         {
             margin-bottom: 35px;
             font-size: .8em;
-            font-family: 'Morse';
             word-spacing: 7px;
+            font-family: 'Morse';
+            word-break: normal;
         }
         form
         {
