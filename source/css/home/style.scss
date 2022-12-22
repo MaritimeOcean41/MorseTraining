@@ -1,135 +1,51 @@
-@import url('https://maritimeocean41.github.io/fonts/main.css');
-*
+@import '../main/var';
+@import 'dark';
+header .title
 {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+    font-size: 2em !important;
 }
-header
+section .buttons
 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100px;
-    .buttons
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 405px;
+    span
     {
-        position: absolute;
-        top: 0;
-        left: 25px;
-        min-width: 200px;
-        height: 100px;
-        vertical-align: middle;
-        .btn
-        {
-            display: inline-block;
-            min-width: 80px;
-            height: 60px;
-            color: #333;
-            margin-top: 20px;
-            line-height: 60px;
-            text-align: center;
-            text-decoration: none;
-            transition: color .2s;
-        }
-        .btn:hover,
-        .btn[name="checked"]
-        {
-            color: #666;
-        }
-    }
-    .title
-    {
-        position: absolute;
-        display: block;
-        left: 50%;
-        width: 250px;
-        color: #333;
-        cursor: default;
-        margin-top: 5px;
-        font-size: 1.8em;
-        font-weight: 600;
-        text-align: center;
-        letter-spacing: 10px;
-        transform: translate(-50%);
-        i
-        {
-            text-decoration-style: none;
-        }
-    }
-}
-section
-{
-    position: fixed;
-    top: 100px;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    .buttons
-    {
+        background-color: $dark-text-2;
         position: relative;
-        left: 50%;
-        width: 515px;
-        min-height: 485px;
+        display: block;
+        width: calc(100% - 15px);
+        height: 110px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        box-shadow: 2px 2px $dark-hover;
+        transition: .2s;
         padding: 15px 0 0 15px;
-        transform: translate(-50%);
-        span
+        a
         {
             display: block;
-            width: 485px;
-            height: 125px;
-            padding: 15px 0 0 15px;
-            border-bottom: 1px #555 solid;
-            .title
-            {
-                display: block;
-                color: #333;
-                text-decoration: none;
-                font-size: 1.4em;
-                letter-spacing: 5px;
-            }
-            .desc
-            {
-                font-size: 1.2em;
-                letter-spacing: 2px;
-            }
-        }
-        span:hover .title
-        {
-            color: #555;
-        }
-    }
-    .gh
-    {
-        position: absolute;
-        left: 20px;
-        bottom: 120px;
-        a
-        {
-            color: #444;
+            width: calc(100% - 15px);
+            text-align: center;
             text-decoration: none;
         }
-        a:hover
+        .title
         {
-            color: #666;
+            color: $light-text-1;
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
+        .desc
+        {
+            color: $light-text-2;
+            margin-top: 10px;
+            letter-spacing: 2px;
         }
     }
-    #theme
+    span:hover
     {
-        position: absolute;
-        right: 5px;
-        bottom: 100px;
-        width: 80px;
-        height: 80px;
-        cursor: pointer;
-        a
-        {
-            position: absolute;
-            font-size: 1.8em;
-            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-        }
-        a#th
-        {
-            clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
-        }
+        background-color: $dark-hover;
     }
 }

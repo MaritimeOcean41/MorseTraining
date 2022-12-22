@@ -1,0 +1,20 @@
+section.dark .buttons
+{
+    span
+    {
+        background-color: $dark-base-15;
+        box-shadow: 2px 2px $dark-base-2;
+        .title
+        {
+            color: $dark-text-1;
+        }
+        .desc
+        {
+            color: $dark-text-2;
+        }
+    }
+    span:hover
+    {
+        background-color: $dark-base-2;
+    }
+}

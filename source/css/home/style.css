@@ -1,141 +1,57 @@
-@import url("https://maritimeocean41.github.io/fonts/main.css");
-* {
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
+section.dark .buttons span {
+  background-color: #222835;
+  box-shadow: 2px 2px #181c25;
 }
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100px;
+section.dark .buttons span .title {
+  color: #eee;
 }
-
-header .buttons {
-  position: absolute;
-  top: 0;
-  left: 25px;
-  min-width: 200px;
-  height: 100px;
-  vertical-align: middle;
+section.dark .buttons span .desc {
+  color: #ddd;
 }
-
-header .buttons .btn {
-  display: inline-block;
-  min-width: 80px;
-  height: 60px;
-  color: #333;
-  margin-top: 20px;
-  line-height: 60px;
-  text-align: center;
-  text-decoration: none;
-  -webkit-transition: color .2s;
-  transition: color .2s;
-}
-
-header .buttons .btn:hover,
-header .buttons .btn[name="checked"] {
-  color: #666;
+section.dark .buttons span:hover {
+  background-color: #181c25;
 }
 
 header .title {
-  position: absolute;
-  display: block;
-  left: 50%;
-  width: 250px;
-  color: #333;
-  cursor: default;
-  margin-top: 5px;
-  font-size: 1.8em;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: 10px;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-}
-
-header .title i {
-  -webkit-text-decoration-style: none;
-          text-decoration-style: none;
-}
-
-section {
-  position: fixed;
-  top: 100px;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  font-size: 2em !important;
 }
 
 section .buttons {
-  position: relative;
-  left: 50%;
-  width: 515px;
-  min-height: 485px;
-  padding: 15px 0 0 15px;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 250px);
+  width: 500px;
+  height: 405px;
 }
-
 section .buttons span {
+  background-color: #ddd;
+  position: relative;
   display: block;
-  width: 485px;
-  height: 125px;
+  width: calc(100% - 15px);
+  height: 110px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px #ccc;
+  transition: 0.2s;
   padding: 15px 0 0 15px;
-  border-bottom: 1px #555 solid;
 }
-
-section .buttons span .title {
+section .buttons span a {
   display: block;
-  color: #333;
+  width: calc(100% - 15px);
+  text-align: center;
   text-decoration: none;
-  font-size: 1.4em;
+}
+section .buttons span .title {
+  color: #333;
+  font-size: 20px;
   letter-spacing: 5px;
 }
-
 section .buttons span .desc {
-  font-size: 1.2em;
+  color: #444;
+  margin-top: 10px;
   letter-spacing: 2px;
 }
-
-section .buttons span:hover .title {
-  color: #555;
-}
-
-section .gh {
-  position: absolute;
-  left: 20px;
-  bottom: 120px;
-}
-
-section .gh a {
-  color: #444;
-  text-decoration: none;
-}
-
-section .gh a:hover {
-  color: #666;
-}
-
-section #theme {
-  position: absolute;
-  right: 5px;
-  bottom: 100px;
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-}
-
-section #theme a {
-  position: absolute;
-  font-size: 1.8em;
-  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-          clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-}
-
-section #theme a#th {
-  -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
-          clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
-}
-/*# sourceMappingURL=style.css.map */
+section .buttons span:hover {
+  background-color: #ccc;
+}/*# sourceMappingURL=style.css.map */

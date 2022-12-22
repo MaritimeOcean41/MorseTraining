@@ -6,7 +6,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="icon" href="source/assets/favicon.png">
         <link rel="stylesheet" href="source/css/home/style.css">
-        <link rel="stylesheet" href="source/css/home/dark.css">
+        <link rel="stylesheet" href="source/css/main/style.css">
     </head>
     <body>
         <header>
@@ -14,8 +14,6 @@
                 <a name="checked" href="/MorseTraining" class="btn">Home</a>
                 <a href="letter.html" class="btn">Letter</a>
                 <a href="word.html" class="btn">Word</a>
-                <a href="mtoletter.html" class="btn">MToLetter</a>
-                <a href="mtoword.html" class="btn">MToWord</a>
             </div>
             <a class="title"><b>M</b><b>o</b><b>r</b><b>s</b><b>e</b> Training</a>
         </header>
@@ -29,17 +27,33 @@
                     <a class="title" href="word.html">📙<b>W</b><b>o</b><b>r</b><b>d</b></a>
                     <a class="desc">Practice with separate words</a>
                 </span>
-                <span>
-                    <a class="title" href="mtoletter.html">📘Morse To <b>L</b><b>e</b><b>t</b><b>t</b><b>e</b><b>r</b></a>
-                    <a class="desc">Indentify letters in morse code</a>
-                </span>
-                <span>
-                    <a class="title" href="mtoword.html">📕Morse To <b>W</b><b>o</b><b>r</b><b>d</b></a>
-                    <a class="desc">Indentify words in morse code</a>
-                </span>
             </div>
+
+            <!-- Github Source -->
             <div class="gh"><a href="https://github.com/MaritimeOcean41/MorseTraining">Código Fonte ↗️</a></div>
-            <div id="theme"><abbr title="Mudar o tema"><a id="th">☀️</a><a id="ico">⚙️</a></abbr></div>
+            
+            <!-- Config Menu -->
+            <div class="config">
+                <div class="options">
+                    <span id="opt" class="theme">
+                        <a>Change Theme</a>
+                        <label class="switch">
+                            <input id="themeCheckbox" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </span>
+                    <span id="opt" class="seq">
+                        <a>Sequence</a>
+                        <label class="switch">
+                            <input id="seqCheckbox" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+            <div class="optButton">
+                <a>⚙️</a>
+            </div>
         </section>
         <script src="source/js/main.js"></script>
     </body>

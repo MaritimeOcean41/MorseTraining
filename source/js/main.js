@@ -1,4 +1,5 @@
 let THEME = localStorage.getItem('theme');
+let SEQ = localStorage.getItem('seq');
 var originalTitle;
 const MORSE = {
     "a": ".-",
@@ -65,42 +66,82 @@ $('b').mouseover(function(e) {
 // Disable "autocomplete" in all inputs
 $('.answer').attr('autocomplete', 'off');
 
-$('#theme').click('click', function(e) {
-    if(THEME === 'light') {
-        $('#th').text('🌑');
-        $('#th').css('rotate', '180deg');
-        $('#ico').css('rotate', '180deg');
+
+
+//  +----------------------------+
+//  |                            |
+//  |   O P T I O N S  M E N U   |
+//  |                            |
+//  +----------------------------+
+
+// Open/close the options menu
+var conf = false;
+$('.optButton').click(function(e) {
+    $(this).animate({rotate: '+=360deg'}, 'slow');
+    if(conf) {
+        $('.config').animate({opacity: '0'});
+        conf = false
+    } else {
+        $('.config').animate({opacity: '100%'});
+        conf = true;
+    }
+});
+$('.options').on('mouseleave', function(e) {
+    $('.config').animate({opacity: '0'}, 'fast');
+    conf = false
+});
+
+// Change Theme
+let themeCheck = document.getElementById('themeCheckbox');
+if(THEME == 'dark') {
+    $('header').addClass('dark');
+    $('section').addClass('dark');
+    themeCheck.checked = true;
+}
+if(THEME == 'light') {
+    $('header').removeClass('dark');
+    $('section').removeClass('dark');
+    themeCheck.checked = false;
+}
+themeCheck.addEventListener('change', function(e) {
+    if(themeCheck.checked) {
         $('header').addClass('dark');
         $('section').addClass('dark');
         localStorage.setItem('theme', 'dark');
     }
-    if(THEME === 'dark') {
-        $('#th').text('☀️');
-        $('#th').css('rotate', '360deg');
-        $('#ico').css('rotate', '360deg');
+    if(!themeCheck.checked) {
         $('header').removeClass('dark');
         $('section').removeClass('dark');
         localStorage.setItem('theme', 'light');
-    } else {
-        localStorage.setItem('theme', 'dark');
     }
-    THEME = localStorage.getItem('theme');
 });
 
-function setTheme() {
-    THEME = localStorage.getItem('theme');
-    if(THEME === 'dark') {
-        $('#th').text('🌑');
-        $('#th').css('rotate', '180deg');
-        $('#ico').css('rotate', '180deg');
-        $('header').addClass('dark');
-        $('section').addClass('dark');
-    } else if (THEME === 'light') {
-        $('#th').text('☀️');
-        $('#th').css('rotate', '360deg');
-        $('#ico').css('rotate', '360deg');
-        $('header').removeClass('dark');
-        $('section').removeClass('dark');
-    }
+// Change Sequence
+let seqCheck = document.getElementById('seqCheckbox');
+if(SEQ == 1) {
+    seqCheck.checked = false;
+    $('.answer').attr('id', '');
+    $('.letter').attr('id', '');
+    $('.word').attr('id', '');
 }
-setTheme();
+if(SEQ == 2) {
+    seqCheck.checked = true;
+    $('.answer').attr('id', 'mto');
+    $('.letter').attr('id', 'mto');
+    $('.word').attr('id', 'mto');
+}
+seqCheck.addEventListener('change', function(e) {
+    if(seqCheck.checked) {
+        localStorage.setItem('seq', 2);
+        $('.answer').attr('id', 'mto');
+        $('.letter').attr('id', 'mto');
+        $('.word').attr('id', 'mto');
+    }
+    if(!seqCheck.checked) {
+        localStorage.setItem('seq', 1);
+        $('.answer').attr('id', '');
+        $('.letter').attr('id', '');
+        $('.word').attr('id', '');
+    }
+    location.reload(true);
+});

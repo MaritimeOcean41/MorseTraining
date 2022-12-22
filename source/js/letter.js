@@ -1,7 +1,7 @@
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
 const LETTER = alphabet[Math.floor(Math.random() * alphabet.length)];
 
-if($('.letter').attr('id') == "mto") {
+if(SEQ == '2') {
     $('.letter').text(MORSE[LETTER]);
 
     document.addEventListener('keypress', function(e) {
