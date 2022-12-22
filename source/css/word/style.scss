@@ -16,14 +16,14 @@ section
     {
         position: relative;
         left: 50%;
-        width: 500px;
+        width: 100vw;
         height: 500px;
         text-align: center;
         transform: translate(-50%);
         .word
         {
             display: block;
-            min-width: 500px;
+            width: 100vw;
             color: $light-text-1;
             font-size: 5em;
             font-weight: 500;
@@ -33,10 +33,9 @@ section
         .word#mto
         {
             margin-bottom: 35px;
-            font-size: .6em;
+            font-size: .8em;
             word-spacing: 7px;
             font-family: 'Morse';
-            word-break: normal;
         }
     }
 }

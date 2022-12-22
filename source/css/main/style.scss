@@ -71,6 +71,7 @@ section
         display: block;
         width: 500px;
         height: 60px;
+        margin-left: calc(50vw - 250px);
         .answer
         {
             background-color: $dark-text-2;

@@ -16,14 +16,14 @@ section
     {
         position: relative;
         left: 50%;
-        width: 500px;
+        width: 100vw;
         height: 500px;
         text-align: center;
         transform: translate(-50%);
         .letter
         {
             display: block;
-            width: 500px;
+            width: 100vw;
             color: $light-text-1;
             font-size: 8em;
             font-weight: 500;

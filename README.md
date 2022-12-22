@@ -53,4 +53,6 @@ Z | --.. |
 
 **[3.0.1 e 3.0.2]:** *Palavras em MTO (Morse TO) pararam de ser cortadas (não tinha sido totalmente resolvido, infelizmente* 😔 *), foram os 2 updates para isso.*
 
-**[4.0.0]:** *Código **definitivamente** organizado, menu dinâmico para mudar as opções (Tema e Sequência), página inicial re-paginada, inicia desenvolvimento para opção em áudio, palavras em MTO (Morse TO) pararam de ser cortadas (agora deu certo* 😃 *)*
+**[4.0.0]:** *Código **definitivamente** organizado, menu dinâmico para mudar as opções (Tema e Sequência), página inicial re-paginada, inicia desenvolvimento para opção em áudio, palavras em MTO (Morse TO) **NÃO** pararam de ser cortadas*
+
+**[4.0.1]:** *Palavras em MTO (Morse TO) pararam de ser cortadas **DEFINITIVAMENTE***

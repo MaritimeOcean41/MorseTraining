@@ -108,6 +108,7 @@ section form {
   display: block;
   width: 500px;
   height: 60px;
+  margin-left: calc(50vw - 250px);
 }
 section form .answer {
   background-color: #ddd;

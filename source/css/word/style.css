@@ -14,14 +14,14 @@ section {
 section .container {
   position: relative;
   left: 50%;
-  width: 500px;
+  width: 100vw;
   height: 500px;
   text-align: center;
   transform: translate(-50%);
 }
 section .container .word {
   display: block;
-  min-width: 500px;
+  width: 100vw;
   color: #333;
   font-size: 5em;
   font-weight: 500;
@@ -30,10 +30,9 @@ section .container .word {
 }
 section .container .word#mto {
   margin-bottom: 35px;
-  font-size: 0.6em;
+  font-size: 0.8em;
   word-spacing: 7px;
   font-family: "Morse";
-  word-break: normal;
 }
 
 section.dark .container .word {
