@@ -56,3 +56,5 @@ Z | --.. |
 **[4.0.0]:** *Código **definitivamente** organizado, menu dinâmico para mudar as opções (Tema e Sequência), página inicial re-paginada, inicia desenvolvimento para opção em áudio, palavras em MTO (Morse TO) **NÃO** pararam de ser cortadas*
 
 **[4.0.1]:** *Palavras em MTO (Morse TO) pararam de ser cortadas **DEFINITIVAMENTE***
+
+**[4.5.0]:** *O primeiro passo em direção ao suporte para o mobile. Adicionado: Botões para facilitar o uso em touchscreens*
