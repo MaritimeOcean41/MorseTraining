@@ -140,12 +140,12 @@ section form .submit {
   font-family: "Morse";
 }
 section .mobile_buttons {
-  position: relative;
+  position: absolute;
   display: block;
-  top: 5%;
   left: 50%;
   width: 800px;
   height: 60px;
+  margin-top: 50px;
   transform: translate(-50%);
 }
 section .mobile_buttons button {

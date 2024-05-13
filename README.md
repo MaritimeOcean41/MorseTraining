@@ -58,3 +58,5 @@ Z | --.. |
 **[4.0.1]:** *Palavras em MTO (Morse TO) pararam de ser cortadas **DEFINITIVAMENTE***
 
 **[4.5.0]:** *O primeiro passo em direção ao suporte para o mobile. Adicionado: Botões para facilitar o uso em touchscreens*
+
+**[4.5.1]:** *Correção de bugs: O botão para acessar as configurações e o texto para o código fonte não aparecem no celular*
