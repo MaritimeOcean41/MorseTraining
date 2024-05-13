@@ -1,4 +1,5 @@
 @import url('https://maritimeocean41.github.io/fonts/main.css');
+//@import 'mobile';
 @import 'dark';
 @import 'var';
 *
@@ -79,7 +80,7 @@ section
             height: 60px;
             outline: none;
             font-size: 1em;
-            margin-left: -200px;
+            margin-left: -170px;
             text-align: center;
             border-style: none;
             border-radius: 30px;
@@ -106,6 +107,29 @@ section
             font-family: 'Morse';
         }
     }
+    .mobile_buttons
+    {
+        position: relative;
+        display: block;
+        top: 5%;
+        left: 50%;
+        width: 800px;
+        height: 60px;
+        transform: translate(-50%);
+        button
+        {
+            background-color: $submit-button;
+            width: 20%;
+            height: 100%;
+            outline: none;
+            color: #fff;
+            border-style: none;
+            border-radius: 30px;
+            font-family: 'Morse';
+        }
+    }
+
+
     .gh
     {
         position: absolute;

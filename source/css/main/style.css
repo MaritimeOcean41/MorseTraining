@@ -93,8 +93,7 @@ header .title {
   transform: translate(-50%);
 }
 header .title i {
-  -webkit-text-decoration-style: none;
-          text-decoration-style: none;
+  text-decoration-style: none;
 }
 
 section {
@@ -116,7 +115,7 @@ section form .answer {
   height: 60px;
   outline: none;
   font-size: 1em;
-  margin-left: -200px;
+  margin-left: -170px;
   text-align: center;
   border-style: none;
   border-radius: 30px;
@@ -136,6 +135,25 @@ section form .submit {
   outline: none;
   font-size: 0.5em;
   margin-left: 5px;
+  border-style: none;
+  border-radius: 30px;
+  font-family: "Morse";
+}
+section .mobile_buttons {
+  position: relative;
+  display: block;
+  top: 5%;
+  left: 50%;
+  width: 800px;
+  height: 60px;
+  transform: translate(-50%);
+}
+section .mobile_buttons button {
+  background-color: rgb(9, 113, 211);
+  width: 20%;
+  height: 100%;
+  outline: none;
+  color: #fff;
   border-style: none;
   border-radius: 30px;
   font-family: "Morse";

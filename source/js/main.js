@@ -63,6 +63,29 @@ $('b').mouseover(function(e) {
     this.innerHTML = originalTitle
 });
 
+var lastInputData;
+$('button#mobile').on('click', function(e) {
+    lastInputData = $('input.answer').val();
+    var newCharacter;
+    switch($(this).attr("class")) {
+        case 'dot':
+            newCharacter = '.';
+            break;
+        case 'space':
+            newCharacter = ' ';
+            break;
+        case 'dash':
+            newCharacter = '-';
+            break;
+        case 'backspace':
+            lastInputData = lastInputData.substring(0, lastInputData.length - 1);
+            newCharacter = '';
+            break;
+    }
+
+    $('input.answer').val(lastInputData + newCharacter);
+});
+
 // Disable "autocomplete" in all inputs
 $('.answer').attr('autocomplete', 'off');
 
