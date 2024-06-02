@@ -74,3 +74,5 @@ Z | --.. |
 **[4.6.0]:** *Mudança no sistema de páginas do site e melhora geral no código e layout. **NOVO MENU:** Customize quais caracteres únicos podem aparecer! (Agora é possível treinar com números também)*
 
 **[4.6.1]:** *Correção de bugs: A nova fonte para traços e pontos não era carregada; quando a "sequência" não era definida o texto não era carregado. [Ambos foram resolvidos]*
+
+**[4.6.2 a 4.6.4]:** *Correção de bugs: Lista de palavras não era carregada; Autofocus não funcionava no input "wordans" pois ele era o segundo input com o atributo 'autofocus' na página. [Ambos foram resolvidos]*
