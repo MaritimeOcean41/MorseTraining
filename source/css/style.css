@@ -1,0 +1,567 @@
+@import url("https://maritimeocean41.github.io/fonts/main.css");
+header.dark a {
+  color: #ddd;
+}
+header.dark div a:hover,
+header.dark div a#checked {
+  color: #eee;
+}
+
+section.dark {
+  background-color: #232937;
+}
+
+footer.dark .gh a {
+  color: #eee;
+}
+footer.dark .gh a:hover {
+  color: #ccc;
+}
+footer.dark .conMenu {
+  background-color: #181c25;
+}
+footer.dark .conMenu .text {
+  color: #eee;
+}
+footer.dark .conMenu .info {
+  color: #bbb;
+}
+footer.dark .conMenu label {
+  border-color: #666;
+}
+footer.dark .conMenu span {
+  background-color: #0f1116;
+}
+footer.dark .conMenu span::before {
+  background-color: #232937;
+  color: #eee;
+}
+footer.dark .conMenu button {
+  background-color: #222835;
+  color: #ddd;
+}
+footer.dark .conMenu button:hover {
+  background-color: #1b202b;
+}
+
+section#homepage.dark a {
+  background-color: #222835;
+  box-shadow: 5px 5px #181c25;
+}
+section#homepage.dark a .title {
+  color: #eee;
+}
+section#homepage.dark a .desc {
+  color: #ddd;
+}
+section#homepage.dark a:hover {
+  background-color: #181c25;
+}
+
+section#letterpage.dark a,
+section#wordpage.dark a {
+  color: #ddd;
+}
+section#letterpage.dark input,
+section#wordpage.dark input {
+  background-color: #222835;
+  color: #ddd;
+  box-shadow: 2px 2px 5px 2px #181c25;
+}
+section#letterpage.dark button,
+section#wordpage.dark button {
+  background-color: #222835;
+  color: #ddd;
+  box-shadow: 2px 2px 5px 2px #181c25;
+}
+section#letterpage.dark button:hover,
+section#wordpage.dark button:hover {
+  background-color: #1b202b;
+}
+
+#popup.dark .letMenu {
+  background-color: #222835;
+}
+#popup.dark .letMenu div a {
+  color: #eee;
+}
+#popup.dark .letMenu .letReset {
+  color: #ddd;
+}
+#popup.dark .letMenu .letClose {
+  color: #ddd;
+}
+
+@font-face {
+  font-family: Morse2o;
+  src: url("/source/assets/Morse-2o.ttf");
+}
+section#homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section#homepage a {
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 140px;
+  margin: 0 auto 20px auto;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px #ccc;
+}
+section#homepage a p {
+  display: block;
+  height: 50px;
+  margin: 0;
+  text-align: center;
+}
+section#homepage a .title {
+  color: #333;
+  font-size: 20px;
+  letter-spacing: 5px;
+  align-content: end;
+}
+section#homepage a .desc {
+  color: #444;
+  letter-spacing: 2px;
+  align-content: center;
+}
+section#homepage a:hover {
+  background-color: #ccc;
+}
+
+section#letterpage,
+section#wordpage {
+  display: flex;
+  flex-direction: column;
+}
+section#letterpage a,
+section#wordpage a {
+  margin: 0 auto 0 auto;
+  color: #333;
+}
+section#letterpage .char,
+section#wordpage .char {
+  margin-top: 50px;
+  font-weight: 600;
+}
+section#letterpage .result,
+section#wordpage .result {
+  margin-top: 25px;
+  font-size: 1.6em;
+  opacity: 0;
+}
+section#letterpage .result#correct,
+section#wordpage .result#correct {
+  margin-top: 20px;
+  color: #40a339;
+  opacity: 100%;
+}
+section#letterpage .result#incorrect,
+section#wordpage .result#incorrect {
+  margin-top: 20px;
+  color: #af352d;
+  opacity: 100%;
+}
+section#letterpage form,
+section#letterpage span,
+section#wordpage form,
+section#wordpage span {
+  display: flex;
+  width: 500px;
+  height: 40px;
+  margin: 10px auto 0 auto;
+  justify-content: space-between;
+}
+section#letterpage form input,
+section#letterpage span input,
+section#wordpage form input,
+section#wordpage span input {
+  background-color: #eee;
+  width: 310px;
+  height: 100%;
+  border-style: none;
+  border-radius: 5px;
+  padding: 0 15px 0 15px;
+  box-shadow: 2px 2px 5px 2px #bbb;
+  outline: none;
+}
+section#letterpage form button,
+section#letterpage span button,
+section#wordpage form button,
+section#wordpage span button {
+  background-color: #eee;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #333;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 3px #bbb;
+  outline: none;
+}
+section#letterpage form button:hover,
+section#letterpage span button:hover,
+section#wordpage form button:hover,
+section#wordpage span button:hover {
+  background-color: #ddd;
+}
+section#letterpage form .submit,
+section#letterpage span .submit,
+section#wordpage form .submit,
+section#wordpage span .submit {
+  width: 150px;
+}
+section#letterpage form .button,
+section#letterpage span .button,
+section#wordpage form .button,
+section#wordpage span .button {
+  width: calc(25% - 5px);
+}
+
+section#letterpage.ctm .char,
+section#wordpage.ctm .char {
+  font-size: 5em;
+}
+section#letterpage.ctm input,
+section#wordpage.ctm input {
+  font-family: Morse2o;
+  font-size: 3em;
+  letter-spacing: 6px;
+}
+
+section#letterpage.mtc .char,
+section#wordpage.mtc .char {
+  font-family: Morse2o;
+  font-size: 6.35em;
+  letter-spacing: 6px;
+}
+section#letterpage.mtc input,
+section#wordpage.mtc input {
+  font-size: 1.35em;
+}
+
+* {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  transition: 0.4s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 100px;
+}
+header div {
+  position: absolute;
+  display: flex;
+  width: 200px;
+  height: 100px;
+  padding-left: 50px;
+  justify-content: space-between;
+}
+header div a:hover,
+header div a#checked {
+  color: #666;
+}
+header a {
+  height: 100px;
+  color: #333;
+  align-content: center;
+}
+header .title {
+  margin: auto;
+  font-size: 2.2em;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 5px;
+  cursor: default;
+}
+
+section {
+  background-color: #eee;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  padding-top: 100px;
+}
+
+footer {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  width: 100vw;
+  min-height: 80px;
+  align-content: end;
+  justify-content: space-between;
+}
+footer .gh {
+  display: inline;
+  max-width: 50vw;
+  height: 80px;
+  align-content: center;
+  padding-left: 20px;
+}
+footer .gh a {
+  color: #444;
+}
+footer .gh a:hover {
+  color: #666;
+}
+footer #clog {
+  position: absolute;
+  right: 20px;
+  height: 80px;
+  font-size: 40px;
+  line-height: 80px;
+}
+footer #cmButton {
+  position: absolute;
+  right: 20px;
+  width: 50px;
+  height: 80px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+footer #cmButton:checked ~ .conMenu {
+  display: block;
+}
+footer #cmButton:checked + #clog {
+  rotate: 100deg;
+}
+footer .conMenu {
+  background-color: #eee;
+  position: absolute;
+  display: none;
+  right: 20px;
+  bottom: 80px;
+  width: 250px;
+  height: 365px;
+  border-radius: 10px;
+  align-content: start;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+footer .conMenu a {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+footer .conMenu .text {
+  height: 45px;
+  color: #333;
+  font-size: 1.25em;
+  align-content: end;
+}
+footer .conMenu .info {
+  height: 50px;
+  color: #666;
+  font-size: 0.85em;
+  align-content: center;
+}
+footer .conMenu label {
+  display: flex;
+  width: 80%;
+  height: 60px;
+  margin-left: 10%;
+  justify-content: center;
+  border-bottom: 1px #ccc solid;
+}
+footer .conMenu label input {
+  display: none;
+}
+footer .conMenu label span {
+  background-color: #ddd;
+  width: 80px;
+  height: 45px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 45px;
+}
+footer .conMenu label span::before {
+  content: "";
+  background-color: #ccc;
+  display: block;
+  margin: 5px 0 0 5px;
+  width: 35px;
+  height: 35px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 100%;
+  line-height: 35px;
+  transition: 0.4s;
+}
+footer .conMenu label input:checked + span::before {
+  margin-left: 40px;
+}
+footer .conMenu label #seqSlider::before {
+  content: "A" !important;
+}
+footer .conMenu label input:checked + #seqSlider::before {
+  content: ".-" !important;
+}
+footer .conMenu label button {
+  background-color: #ddd;
+  width: calc(100% - 50px);
+  height: 45px;
+  margin-top: 5px;
+  cursor: pointer;
+  color: #333;
+  font-size: 1em;
+  border-style: none;
+  border-radius: 5px;
+  outline: none;
+}
+footer .conMenu label button:hover {
+  background-color: #ccc;
+}
+
+#popup {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+}
+#popup .letMenu {
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  height: 470px;
+  margin: auto;
+  border-radius: 10px;
+}
+#popup .letMenu a.letReset {
+  width: 100%;
+  height: 25px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: center;
+}
+#popup .letMenu div.letHead {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  font-size: 1.5em;
+  text-align: center;
+  justify-content: space-between;
+}
+#popup .letMenu div.letHead a {
+  position: absolute;
+  width: 470px;
+  height: 55px;
+  letter-spacing: 2px;
+  text-align: center;
+  align-content: end;
+}
+#popup .letMenu div.letHead span {
+  width: 30px;
+  height: 30px;
+  margin: 10px 15px auto auto;
+  color: #0f1116;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 1;
+}
+#popup .letMenu div#letCus {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 90%;
+  height: calc(95% - 55px);
+  margin: 0 auto;
+}
+#popup .letMenu div#letCus label a {
+  font-size: 1.35em;
+  font-weight: 600;
+}
+#popup .letMenu div#letCus label input {
+  background-color: #ddd;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/*
+section
+{
+    width: 100vw;
+    height: calc(100vh - 100px);
+    padding-top: 100px;
+    form
+    {
+        display: block;
+        width: 500px;
+        height: 60px;
+        margin-left: calc(50vw - 250px);
+        .answer
+        {
+            background-color: $dark-text-2;
+            width: 330px;
+            height: 60px;
+            outline: none;
+            font-size: 1em;
+            margin-left: -170px;
+            text-align: center;
+            border-style: none;
+            border-radius: 30px;
+            font-family: 'Morse';
+        }
+        .answer#mto
+        {
+            font-size: 2em;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+        .submit
+        {
+            background-color: $submit-button;
+            position: absolute;
+            width: 160px;
+            height: 60px;
+            color: #eee;
+            outline: none;
+            font-size: .5em;
+            margin-left: 5px;
+            border-style: none;
+            border-radius: 30px;
+            font-family: 'Morse';
+        }
+    }
+    .mobile_buttons
+    {
+        position: absolute;
+        display: block;
+        left: 50%;
+        width: 800px;
+        height: 60px;
+        margin-top: 50px;
+        transform: translate(-50%);
+        button
+        {
+            background-color: $submit-button;
+            width: 20%;
+            height: 100%;
+            outline: none;
+            color: #fff;
+            border-style: none;
+            border-radius: 30px;
+            font-family: 'Morse';
+        }
+    }
+}*//*# sourceMappingURL=style.css.map */

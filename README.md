@@ -3,10 +3,10 @@ Aqui você pode treinar código morse! Com letras separadas ou palavras <3
 
 `.- --.- ..- .. / ...- --- -.-. . / .--. --- -.. . / - .-. . .. -. .- .-. / -.-. --- -.. .. --. --- / -- --- .-. ... . / -.-. --- -- / .-.. . - .-. .- ... / ... . .--. .- .-. .- -.. .- ... / --- ..- / .--. .- .-.. .- ...- .-. .- ... / <3`
 
-*"Ta depois desse update **[2.0.0v]** eu acho que comecei a levar esse site mais a sério, e não tenho certeza se isso é algo bom ou não." - Ocean, Mart 41/41/2041*
+*"Ta depois desse update **[2.0.0]** eu acho que comecei a levar esse site mais a sério, e não tenho certeza se isso é algo bom ou não." - Ocean, Mart 41/41/2041*
 
- 
- Código Morse Internacional | *(Apenas letras)* |
+
+ Código Morse Internacional | *(Sem caracteres especiais!)* |
 --- | ---
 Letras | Código Morse |
 A | .- |
@@ -35,6 +35,16 @@ W | .-- |
 X | -..- |
 Y | -.-- |
 Z | --.. |
+0 | ----- |
+1 | .---- |
+2 | ..--- |
+3 | ...-- |
+4 | ....- |
+5 | ..... |
+6 | -.... |
+7 | --... |
+8 | ---.. |
+9 | ----. |
 
 
 *Change Log:*
@@ -60,3 +70,5 @@ Z | --.. |
 **[4.5.0]:** *O primeiro passo em direção ao suporte para o mobile. Adicionado: Botões para facilitar o uso em touchscreens*
 
 **[4.5.1]:** *Correção de bugs: O botão para acessar as configurações e o texto para o código fonte não aparecem no celular*
+
+**[4.6.0]:** *Mudança no sistema de páginas do site e melhora geral no código e layout. **NOVO MENU:** Customize quais caracteres únicos podem aparecer! (Agora é possível treinar com números também)*

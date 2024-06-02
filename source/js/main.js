@@ -1,3 +1,4 @@
+const LAN = localStorage.getItem('lan');
 let THEME = localStorage.getItem('theme');
 let SEQ = localStorage.getItem('seq');
 var originalTitle;
@@ -28,6 +29,16 @@ const MORSE = {
     "x": "-..-",
     "y": "-.--",
     "z": "--..",
+    "0": "-----",
+    "1": ".----",
+    "2": "..---",
+    "3": "...--",
+    "4": "....-",
+    "5": ".....",
+    "6": "-....",
+    "7": "--...",
+    "8": "---..",
+    "9": "----.",
     ".-": "a",
     "-...": "b",
     "-.-.": "c",
@@ -53,43 +64,28 @@ const MORSE = {
     ".--": "w",
     "-..-": "x",
     "-.--": "y",
-    "--..": "z"
+    "--..": "z",
+    "-----": "0",
+    ".----": "1",
+    "..---": "2",
+    "...--": "3",
+    "....-": "4",
+    ".....": "5",
+    "-....": "6",
+    "--...": "7",
+    "---..": "8",
+    "----.": "9",
 }
 
-$('b').mouseover(function(e) {
+$(document).on('mouseenter', 'b', function(e) {
     originalTitle = this.innerHTML;
     this.innerHTML = MORSE[this.innerHTML.toLowerCase()]
-}).mouseout(function(e) {
+}).on('mouseout', 'b', function(e) {
     this.innerHTML = originalTitle
 });
 
-var lastInputData;
-$('button#mobile').on('click', function(e) {
-    lastInputData = $('input.answer').val();
-    var newCharacter;
-    switch($(this).attr("class")) {
-        case 'dot':
-            newCharacter = '.';
-            break;
-        case 'space':
-            newCharacter = ' ';
-            break;
-        case 'dash':
-            newCharacter = '-';
-            break;
-        case 'backspace':
-            lastInputData = lastInputData.substring(0, lastInputData.length - 1);
-            newCharacter = '';
-            break;
-    }
-
-    $('input.answer').val(lastInputData + newCharacter);
-});
-
 // Disable "autocomplete" in all inputs
-$('.answer').attr('autocomplete', 'off');
-
-
+$('input').attr('autocomplete', 'off');
 
 //  +----------------------------+
 //  |                            |
@@ -97,74 +93,137 @@ $('.answer').attr('autocomplete', 'off');
 //  |                            |
 //  +----------------------------+
 
-// Open/close the options menu
-var conf = false;
-$('.optButton').click(function(e) {
-    $(this).animate({rotate: '+=360deg'}, 'slow');
-    if(conf) {
-        $('.config').animate({opacity: '0'});
-        conf = false
-    } else {
-        $('.config').animate({opacity: '100%'});
-        conf = true;
-    }
-});
-$('.options').on('mouseleave', function(e) {
-    $('.config').animate({opacity: '0'}, 'fast');
-    conf = false
+// Close Menu
+let cmButton = document.getElementById('cmButton');
+$('.conMenu').on('mouseleave', function(e) {
+    cmButton.checked = false;
 });
 
 // Change Theme
-let themeCheck = document.getElementById('themeCheckbox');
+let themeCheck = document.getElementById('theme');
 if(THEME == 'dark') {
     $('header').addClass('dark');
     $('section').addClass('dark');
+    $('footer').addClass('dark');
+    $('#popup').addClass('dark');
     themeCheck.checked = true;
 }
 if(THEME == 'light') {
     $('header').removeClass('dark');
     $('section').removeClass('dark');
+    $('footer').removeClass('dark');
+    $('#popup').removeClass('dark');
     themeCheck.checked = false;
 }
 themeCheck.addEventListener('change', function(e) {
     if(themeCheck.checked) {
         $('header').addClass('dark');
         $('section').addClass('dark');
+        $('footer').addClass('dark');
+        $('#popup').addClass('dark');
         localStorage.setItem('theme', 'dark');
     }
     if(!themeCheck.checked) {
         $('header').removeClass('dark');
         $('section').removeClass('dark');
+        $('footer').removeClass('dark');
+        $('#popup').removeClass('dark');
         localStorage.setItem('theme', 'light');
     }
 });
 
 // Change Sequence
-let seqCheck = document.getElementById('seqCheckbox');
-if(SEQ == 1) {
-    seqCheck.checked = false;
-    $('.answer').attr('id', '');
-    $('.letter').attr('id', '');
-    $('.word').attr('id', '');
-}
-if(SEQ == 2) {
+let seqCheck = document.getElementById('seq');
+if(SEQ == 'mtc') { // Morse to Character
     seqCheck.checked = true;
-    $('.answer').attr('id', 'mto');
-    $('.letter').attr('id', 'mto');
-    $('.word').attr('id', 'mto');
+    $('section').removeClass('ctm');
+    $('section').addClass('mtc');
+}
+if(SEQ == 'ctm') { // Character to Morse
+    seqCheck.checked = false;
+    $('section').removeClass('mtc');
+    $('section').addClass('ctm');
 }
 seqCheck.addEventListener('change', function(e) {
-    if(seqCheck.checked) {
-        localStorage.setItem('seq', 2);
-        $('.answer').attr('id', 'mto');
-        $('.letter').attr('id', 'mto');
-        $('.word').attr('id', 'mto');
+    if(seqCheck.checked) { // Morse to Character
+        localStorage.setItem('seq', 'mtc');
+        $('section').removeClass('ctm');
+        $('section').addClass('mtc');
     }
-    if(!seqCheck.checked) {
-        localStorage.setItem('seq', 1);
-        $('.answer').attr('id', '');
-        $('.letter').attr('id', '');
-        $('.word').attr('id', '');
+    if(!seqCheck.checked) { // Character to Morse
+        localStorage.setItem('seq', 'ctm');
+        $('section').removeClass('mtc');
+        $('section').addClass('ctm');
     }
-    location.reload(true);
+    setTimeout(location.reload.bind(location), 300); // Reload the page after delay
 });
+
+// Page changer
+const searchParams = new URLSearchParams(window.location.search);
+$(window).on('load', function(e) {
+    $('#checked').attr('id', 'non');
+    $('section').css('display', 'none');
+    switch(searchParams.get('page')) {
+        case 'letter':
+            $('.letterbutton').attr('id', 'checked');
+            $('#letterpage').css('display', 'flex');
+            $('#headerTitle').html(`<b>L</b><b>e</b><b>t</b><b>t</b><b>e</b><b>r</b> <br/> Training`);
+            if(/^\d+$/.test(answer) || /^\d+$/.test(char)) { // A little easter egg
+                $('#headerTitle').html(`<b>N</b><b>u</b><b>m</b><b>b</b><b>e</b><b>r</b> <br/> Training`);
+            }            
+            break;
+        case 'word':
+            $('.wordbutton').attr('id', 'checked');
+            $('#wordpage').css('display', 'flex');
+            $('#headerTitle').html(`<b>W</b><b>o</b><b>r</b><b>d</b> <br/> Training`);
+            break;
+        default:
+            $('.homebutton').attr('id', 'checked');
+            $('#homepage').css('display', 'flex');
+            break;
+    }
+});
+
+
+//  +----------------------------+
+//  |                            |
+//  |   C U S T O M .  M E N U   |
+//  |                            |
+//  +----------------------------+
+
+var l = 'abcdefghijklmnopqrstuvwxyz0123456789'; // Base model for "LAN" (Letters And Numbers)
+for(i=0;i<l.length;i++) { // Create all the checkboxes for the "Customize Menu"
+    $('#letCus').append(`
+        <label>
+            <input type="checkbox" class="letCheck" id="${l[i]}" />
+            <a>${l[i].toUpperCase()}</a>
+        </label>
+    `);
+};
+if(LAN == null || LAN == 0) { // If LAN is not defined yet (""First time"" only!)
+    localStorage.setItem('lan', l);
+    window.location.reload();
+}
+for(j=0;j<LAN.length;j++) { // Check every checkbox to match with the LAN value
+    document.getElementById(LAN[j]).checked = true;
+};
+$(document).on('change', 'input.letCheck', function(e) { // When change a "Customize menu"'s checkbox
+    var letInps = document.querySelectorAll('input.letCheck');
+    var newLAN = [];
+    for(i=0;i<letInps.length;i++) { // Loop for all "Customize menu" checkboxes
+        if(letInps[i].checked) { // If the checkbox is checked add it's value to "newLAN" array
+            newLAN.push(letInps[i].id);
+        }
+    }
+    localStorage.setItem('lan', newLAN.join('')); // Set LAN as "newLAN" array
+});
+$(document).on('click', function(e) {
+    if(document.getElementById('letBtn').contains(e.target)) { // Click on the "open customize menu" button
+        $('#popup').css('display', 'flex');
+    } else if(document.getElementById('letReset').contains(e.target)) { // Click on the "reset everthing on the customize menu" button
+        localStorage.setItem('lan', l);
+        window.location.reload();
+    } else if(!document.getElementById('letMenu').contains(e.target) || document.getElementById('letClose').contains(e.target)) { // Click on the "close customize menu" button or click outside the "customize menu"
+        $('#popup').css('display', 'none');
+    }
+})

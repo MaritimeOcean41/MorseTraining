@@ -1,0 +1,134 @@
+@import 'var';
+
+header.dark
+{
+    a
+    {
+        color: $dark-text-2;
+    }
+    div a:hover,
+    div a#checked
+    {
+        color: $dark-text-1;
+    }
+}
+section.dark
+{
+    background-color: $dark-base;
+}
+footer.dark
+{
+    // Source Code
+    .gh
+    {
+        a
+        {
+            color: $dark-text-1;
+        }
+        a:hover
+        {
+            color: $dark-hover;
+        }
+    }
+    // Configuration Menu
+    .conMenu
+    {
+        background-color: $dark-base-2;
+        .text
+        {
+            color: $dark-text-1;
+        }
+        .info
+        {
+            color: $dark-hover-2;
+        }
+        label
+        {
+            border-color: $light-hover;
+        }
+        span
+        {
+            background-color: $dark-base-3;
+        }
+        span::before
+        {
+            background-color: $dark-base;
+            color: $dark-text-1;
+        }
+
+        button
+        {
+            background-color: $dark-base-15;
+            color: $dark-text-2;
+        }
+        button:hover
+        {
+            background-color: $dark-base-16;
+        }
+    }
+}
+
+// Homepage
+section#homepage.dark
+{
+    a
+    {
+        background-color: $dark-base-15;
+        box-shadow: 5px 5px $dark-base-2;
+        .title
+        {
+            color: $dark-text-1;
+        }
+        .desc
+        {
+            color: $dark-text-2;
+        }
+    }
+    a:hover
+    {
+        background-color: $dark-base-2;
+    }
+}
+
+// Letterpage
+section#letterpage.dark,
+section#wordpage.dark
+{
+    a
+    {
+        color: $dark-text-2;
+    }
+    input
+    {
+        background-color: $dark-base-15;
+        color: $dark-text-2;
+        box-shadow: 2px 2px 5px 2px $dark-base-2;
+    }
+    button
+    {
+        background-color: $dark-base-15;
+        color: $dark-text-2;
+        box-shadow: 2px 2px 5px 2px $dark-base-2;
+    }
+    button:hover
+    {
+        background-color: $dark-base-16;
+    }
+}
+
+#popup.dark .letMenu
+{
+    background-color: $dark-base-15;
+    div a
+    {
+        color: $dark-text-1;      
+    }
+    .letReset
+    {
+        color: $dark-text-2;
+    }
+    .letClose
+    {
+        color: $dark-text-2;
+    }
+}

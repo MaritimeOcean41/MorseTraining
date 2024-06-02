@@ -1,0 +1,162 @@
+@font-face {
+    font-family: Morse2o;
+    src: url('/source/assets/Morse-2o.ttf');
+}
+
+// Homepage
+section#homepage
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a
+    {
+        background-color: $dark-text-2;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 140px;
+        margin: 0 auto 20px auto;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 5px 5px $dark-hover;
+        p
+        {
+            display: block;
+            height: 50px;
+            margin: 0;
+            text-align: center;
+        }
+        .title
+        {
+            color: $light-text-1;
+            font-size: 20px;
+            letter-spacing: 5px;
+            align-content: end;
+        }
+        .desc
+        {
+            color: $light-text-2;
+            letter-spacing: 2px;
+            align-content: center;
+        }
+    }
+    a:hover
+    {
+        background-color: $dark-hover;
+    }
+}
+
+// Letterpage && Wordpage
+
+    // Character to Morse
+section#letterpage,
+section#wordpage
+{
+    display: flex;
+    flex-direction: column;
+    a
+    {
+        margin: 0 auto 0 auto;
+        color: $light-text-1;
+    }
+    .char
+    {
+        margin-top: 50px;
+        font-weight: 600;
+    }
+    .result
+    {
+        margin-top: 25px;
+        font-size: 1.6em;
+        opacity: 0;
+    }
+    .result#correct
+    {
+        margin-top: 20px;
+        color: $correct-color;
+        opacity: 100%;
+    }
+    .result#incorrect
+    {
+        margin-top: 20px;
+        color: $incorrect-color;
+        opacity: 100%;
+    }
+    form,
+    span
+    {
+        display: flex;
+        width: 500px;
+        height: 40px;
+        margin: 10px auto 0 auto;
+        justify-content: space-between;
+        input
+        {
+            background-color: $dark-text-1;
+            width: 310px;
+            height: 100%;
+            border-style: none;
+            border-radius: 5px;
+            padding: 0 15px 0 15px;
+            box-shadow: 2px 2px 5px 2px $dark-hover-2;
+            outline: none;
+        }
+        button
+        {
+            background-color: $dark-text-1;
+            height: 100%;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: $light-text-1;
+            border-style: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px 3px $dark-hover-2;
+            outline: none;
+        }
+        button:hover
+        {
+            background-color: $dark-text-2;
+        }
+        .submit
+        {
+            width: 150px;
+        }
+        .button
+        {
+            width: calc(25% - 5px);
+        }
+    }
+}
+
+
+    // Character to Morse
+section#letterpage.ctm,
+section#wordpage.ctm
+{
+    .char
+    {
+        font-size: 5em;   
+    }
+    input
+    {
+        font-family: Morse2o;
+        font-size: 3em;
+        letter-spacing: 6px;
+    }
+}
+    // Morse to Character
+section#letterpage.mtc,
+section#wordpage.mtc
+{
+    .char
+    {
+        font-family: Morse2o;
+        font-size: 6.35em;
+        letter-spacing: 6px;
+    }
+    input
+    {
+        font-size: 1.35em;
+    }
+}

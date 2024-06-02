@@ -5,56 +5,100 @@
         <title>Morse Training</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="icon" href="source/assets/favicon.png">
-        <link rel="stylesheet" href="source/css/home/style.css">
-        <link rel="stylesheet" href="source/css/main/style.css">
+        <link rel="stylesheet" href="source/css/style.css">
     </head>
     <body>
+        <!-- Header -->
         <header>
-            <div class="buttons">
-                <a name="checked" href="/MorseTraining" class="btn">Home</a>
-                <a href="letter.html" class="btn">Letter</a>
-                <a href="word.html" class="btn">Word</a>
+            <div>
+                <a href="?page=home" class="homebutton" id="checked">Home</a>
+                <a href="?page=letter" class="letterbutton">Letter</a>
+                <a href="?page=word" class="wordbutton">Word</a>
             </div>
-            <a class="title"><b>M</b><b>o</b><b>r</b><b>s</b><b>e</b> Training</a>
+            <a class="title" id="headerTitle"><b>M</b><b>o</b><b>r</b><b>s</b><b>e</b> <br/> Training</a>
         </header>
-        <section>
-            <div class="buttons">
-                <span>
-                    <a class="title" href="letter.html">📗<b>L</b><b>e</b><b>t</b><b>t</b><b>e</b><b>r</b></a>
-                    <a class="desc">Practice with separate letters</a>
-                </span>
-                <span>
-                    <a class="title" href="word.html">📙<b>W</b><b>o</b><b>r</b><b>d</b></a>
-                    <a class="desc">Practice with separate words</a>
-                </span>
-            </div>
 
+        <!-- Home Page -->
+        <section id="homepage">
+            <a href="?page=letter">
+                <p class="title">📗<b>L</b><b>e</b><b>t</b><b>t</b><b>e</b><b>r</b></p>
+                <p class="desc">Practice with separate letters</p>
+            </a>
+            <a href="?page=word">
+                <p class="title">📙<b>W</b><b>o</b><b>r</b><b>d</b></p>
+                <p class="desc">Practice with separate words</p>
+            </a>
+        </section>
+
+        <!-- Letter Page -->
+        <section id="letterpage">
+            <a class="char" id="lettercha"></a>
+            <span>
+                <input type="text" class="answer" id="letterans" autofocus /><button class="submit" onclick="check('letter')">Check</button>
+            </span>
+            <span>
+                <button class="button" id="dot">.</button>
+                <button class="button" id="dash">-</button>
+                <button class="button" id="space">_</button>
+                <button class="button" id="return"><-</button>
+            </span>
+            <a class="result"></a>
+        </section>
+
+        <!-- Word Page -->
+        <section id="wordpage">
+            <a class="char" id="wordcha"></a>
+            <span>
+                <input type="text" class="answer" id="wordans" autofocus /><button class="submit" onclick="check('word')">Check</button>
+            </span>
+            <span>
+                <button class="button" id="dot">.</button>
+                <button class="button" id="dash">-</button>
+                <button class="button" id="space">_</button>
+                <button class="button" id="return"><-</button>
+            </span>
+            <a class="result"></a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="extra">
             <!-- Github Source -->
             <div class="gh"><a href="https://github.com/MaritimeOcean41/MorseTraining">Código Fonte ↗️</a></div>
             
             <!-- Config Menu -->
-            <div class="config">
-                <div class="options">
-                    <span id="opt" class="theme">
-                        <a>Change Theme</a>
-                        <label class="switch">
-                            <input id="themeCheckbox" type="checkbox">
-                            <span class="slider"></span>
-                        </label>
-                    </span>
-                    <span id="opt" class="seq">
-                        <a>Sequence</a>
-                        <label class="switch">
-                            <input id="seqCheckbox" type="checkbox">
-                            <span class="slider"></span>
-                        </label>
-                    </span>
+            <input id="cmButton" type="checkbox">
+            <a id="clog">⚙️</a>
+            <div class="conMenu" id="conMenu">
+                <a class="text">Change Theme</a>
+                <label class="switch">
+                    <input type="checkbox" id="theme">
+                    <span class="slider"></span>
+                </label>
+                <a class="text">Sequence</a>
+                <label class="switch">
+                    <input type="checkbox" id="seq">
+                    <span class="slider" id="seqSlider"></span>
+                </label>
+                <a class="text">Letters</a>
+                <label class="letters">
+                    <button id="letBtn">Customize</button>
+                </label>
+                <a class="info">Reload to apply changes*</a>
+            </div>
+        </footer>
+
+        <div id="popup">
+            <div class="letMenu" id="letMenu">
+                <div class="letHead">
+                    <a class="text">Letters:</a>
+                    <span class="letClose" id="letClose">X</span>
                 </div>
+                <div id="letCus">
+                </div>
+                <a class="letReset" id="letReset">Reset all</a>
             </div>
-            <div class="optButton">
-                <a>⚙️</a>
-            </div>
-        </section>
+        </div>
         <script src="source/js/main.js"></script>
+        <script src="source/js/pages.js"></script>
     </body>
 </html>

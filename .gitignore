@@ -1,7 +1,9 @@
-old/
+node_modules/
+package-lock.json
+package.json
+app.js
+
+full-word-list.txt
+
+old2/
 new/
-audio.html
-source/css/audio/
-source/js/audio/
-source/js/audio.js
-source/css/main/_mobile.scss

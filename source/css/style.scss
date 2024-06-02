@@ -1,0 +1,371 @@
+@import url('https://maritimeocean41.github.io/fonts/main.css');
+//@import 'mobile';
+@import 'darkTheme';
+@import 'var';
+
+// Import External
+@import 'pages';
+
+*
+{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: .4s;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+header
+{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    div // Nav Menu
+    {
+        position: absolute;
+        display: flex;
+        width: 200px;
+        height: 100px;
+        padding-left: 50px;
+        justify-content: space-between;
+        a:hover,
+        a#checked
+        {
+            color: $light-hover;
+        }
+    }
+    a
+    {
+        height: 100px;
+        color: $light-text-1;
+        align-content: center;
+    }
+    .title
+    {
+        margin: auto;
+        font-size: 2.2em;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 5px;
+        cursor: default;
+    }
+}
+section
+{
+    background-color: $dark-text-1;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    padding-top: 100px;
+}
+footer
+{
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100vw;
+    min-height: 80px;
+    align-content: end;
+    justify-content: space-between;
+    // Source Code
+    .gh
+    {
+        display: inline;
+        max-width: 50vw;
+        height: 80px;
+        align-content: center;
+        padding-left: 20px;
+        a
+        {
+            color: $light-text-2;
+        }
+        a:hover
+        {
+            color: $light-hover;
+        }
+    }
+
+    // Configuration Menu
+    #clog
+    {
+        position: absolute;
+        right: 20px;
+        height: 80px;
+        font-size: 40px;
+        line-height: 80px;
+    }
+    #cmButton
+    {
+        position: absolute;
+        right: 20px;
+        width: 50px;
+        height: 80px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 1;
+    }
+    #cmButton:checked ~ .conMenu
+    {
+        display: block;
+    }
+    #cmButton:checked + #clog
+    {
+        rotate: 100deg;
+    }
+    .conMenu
+    {
+        background-color: $dark-text-1;
+        position: absolute;
+        display: none;
+        right: 20px;
+        bottom: 80px;
+        width: 250px;
+        height: calc(105px*3 + 50px);
+        border-radius: 10px;
+        align-content: start;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        a
+        {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .text
+        {
+            height: 45px;
+            color: $light-text-1;
+            font-size: 1.25em;
+            align-content: end;
+        }
+        .info
+        {
+            height: 50px;
+            color: $light-hover;
+            font-size: .85em;
+            align-content: center;
+        }
+        label
+        {
+            display: flex;
+            width: 80%;
+            height: 60px;
+            margin-left: 10%;
+            justify-content: center;
+            border-bottom: 1px $dark-hover solid;
+            input
+            {
+                display: none;
+            }
+            span
+            {
+                background-color: $dark-text-2;
+                width: 80px;
+                height: 45px;
+                margin-top: 5px;
+                cursor: pointer;
+                transition: .4s;
+                border-radius: 45px;
+            }
+            span::before
+            {
+                content: "";
+                background-color: $dark-hover;
+                display: block;
+                margin: 5px 0 0 5px;
+                width: 35px;
+                height: 35px;
+                color: $light-text-1;
+                font-size: 20px;
+                font-weight: 600;
+                text-align: center;
+                border-radius: 100%;
+                line-height: 35px;          
+                transition: .4s;
+            }
+            input:checked + span::before
+            {
+                margin-left: 40px;
+            }
+            #seqSlider::before
+            {
+                content: "A" !important;
+            }
+            input:checked + #seqSlider::before
+            {
+                content: ".-" !important;
+            }
+
+            button
+            {
+                background-color: $dark-text-2;
+                width: calc(100% - 50px);
+                height: 45px;
+                margin-top: 5px;
+                cursor: pointer;
+                color: $light-text-1;
+                font-size: 1em;
+                border-style: none;
+                border-radius: 5px;
+                outline: none;
+            }
+            button:hover
+            {
+                background-color: $dark-hover;
+            }
+        }
+    }
+}
+#popup
+{
+    background-color: rgba(0,0,0,.3);
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    .letMenu
+    {
+        $size: 470px;
+        background-color: $dark-text-1;
+        display: flex;
+        flex-direction: column;
+        width: $size;
+        height: $size;
+        margin: auto;
+        border-radius: 10px;
+        a.letReset
+        {
+            width: 100%;
+            height: 25px;
+            cursor: pointer;
+            text-decoration: underline;
+            text-align: center;
+        }
+        div.letHead
+        {
+            display: flex;
+            width: 100%;
+            height: 55px;
+            font-size: 1.5em;
+            text-align: center;
+            justify-content: space-between;
+            a
+            {
+                position: absolute;
+                width: $size;
+                height: 55px;
+                letter-spacing: 2px;
+                text-align: center;
+                align-content: end;
+            }
+            span
+            {
+                width: 30px;
+                height: 30px;
+                margin: 10px 15px auto auto;
+                color: $dark-base-3;
+                font-weight: 800;
+                cursor: pointer;
+                z-index: 1;
+            }
+        }
+        div#letCus
+        {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            width: 90%;
+            height: calc(95% - 55px);
+            margin: 0 auto;
+            label
+            {
+                $size: 20px;
+                a
+                {
+                    font-size: 1.35em;
+                    font-weight: 600;
+                }
+                input
+                {
+                    background-color: $dark-text-2;
+                    width: $size;
+                    height: $size;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+/*
+section
+{
+    width: 100vw;
+    height: calc(100vh - 100px);
+    padding-top: 100px;
+    form
+    {
+        display: block;
+        width: 500px;
+        height: 60px;
+        margin-left: calc(50vw - 250px);
+        .answer
+        {
+            background-color: $dark-text-2;
+            width: 330px;
+            height: 60px;
+            outline: none;
+            font-size: 1em;
+            margin-left: -170px;
+            text-align: center;
+            border-style: none;
+            border-radius: 30px;
+            font-family: 'Morse';
+        }
+        .answer#mto
+        {
+            font-size: 2em;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+        .submit
+        {
+            background-color: $submit-button;
+            position: absolute;
+            width: 160px;
+            height: 60px;
+            color: #eee;
+            outline: none;
+            font-size: .5em;
+            margin-left: 5px;
+            border-style: none;
+            border-radius: 30px;
+            font-family: 'Morse';
+        }
+    }
+    .mobile_buttons
+    {
+        position: absolute;
+        display: block;
+        left: 50%;
+        width: 800px;
+        height: 60px;
+        margin-top: 50px;
+        transform: translate(-50%);
+        button
+        {
+            background-color: $submit-button;
+            width: 20%;
+            height: 100%;
+            outline: none;
+            color: #fff;
+            border-style: none;
+            border-radius: 30px;
+            font-family: 'Morse';
+        }
+    }
+}*/
