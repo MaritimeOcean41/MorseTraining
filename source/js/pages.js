@@ -7,6 +7,8 @@ var word;
 $(document).ready(function() {
     switch(searchParams.get('page')) {
         case 'letter': // Letterpage
+            $("#letterans").focus(); // Auto focus to the "letter input"
+
             if(SEQ == 'ctm') { // Character to Morse
                 answer = MORSE[ranLAN];
                 char = ranLAN;
@@ -22,6 +24,8 @@ $(document).ready(function() {
 
 
         case 'word': // Wordpage
+            $("#wordans").focus(); // Auto focus to the "word input"
+
             $.getJSON('source/assets/word-list.json', function(data) { // Get the word list
                 word = data[Math.floor(Math.random()*data.length+1)]; // Pick a random word
     
