@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 
         case 'word': // Wordpage
-            $.getJSON('/source/assets/word-list.json', function(data) { // Get the word list
+            $.getJSON('source/assets/word-list.json', function(data) { // Get the word list
                 word = data[Math.floor(Math.random()*data.length+1)]; // Pick a random word
     
                 if(SEQ == 'ctm') { // Character to Morse
