@@ -72,3 +72,5 @@ Z | --.. |
 **[4.5.1]:** *Correção de bugs: O botão para acessar as configurações e o texto para o código fonte não aparecem no celular*
 
 **[4.6.0]:** *Mudança no sistema de páginas do site e melhora geral no código e layout. **NOVO MENU:** Customize quais caracteres únicos podem aparecer! (Agora é possível treinar com números também)*
+
+**[4.6.1]:** *Correção de bugs: A nova fonte para traços e pontos não era carregada; quando a "sequência" não era definida o texto não era carregado. [Ambos foram resolvidos]*

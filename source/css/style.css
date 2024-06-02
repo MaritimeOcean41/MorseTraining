@@ -92,10 +92,6 @@ section#wordpage.dark button:hover {
   color: #ddd;
 }
 
-@font-face {
-  font-family: Morse2o;
-  src: url("/source/assets/Morse-2o.ttf");
-}
 section#homepage {
   display: flex;
   flex-direction: column;
@@ -183,6 +179,7 @@ section#wordpage span input {
   background-color: #eee;
   width: 310px;
   height: 100%;
+  color: #333;
   border-style: none;
   border-radius: 5px;
   padding: 0 15px 0 15px;
@@ -228,14 +225,14 @@ section#wordpage.ctm .char {
 }
 section#letterpage.ctm input,
 section#wordpage.ctm input {
-  font-family: Morse2o;
+  font-family: "Morse2o";
   font-size: 3em;
   letter-spacing: 6px;
 }
 
 section#letterpage.mtc .char,
 section#wordpage.mtc .char {
-  font-family: Morse2o;
+  font-family: "Morse2o";
   font-size: 6.35em;
   letter-spacing: 6px;
 }

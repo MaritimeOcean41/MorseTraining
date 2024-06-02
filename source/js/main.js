@@ -134,6 +134,10 @@ themeCheck.addEventListener('change', function(e) {
 
 // Change Sequence
 let seqCheck = document.getElementById('seq');
+if(SEQ == null || SEQ == 0) { // If SEQ is not defined yet (""First time"" only!)
+    localStorage.setItem('seq', 'ctm');
+    window.location.reload();
+}
 if(SEQ == 'mtc') { // Morse to Character
     seqCheck.checked = true;
     $('section').removeClass('ctm');

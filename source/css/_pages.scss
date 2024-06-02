@@ -1,8 +1,3 @@
-@font-face {
-    font-family: Morse2o;
-    src: url('/source/assets/Morse-2o.ttf');
-}
-
 // Homepage
 section#homepage
 {
@@ -96,6 +91,7 @@ section#wordpage
             background-color: $dark-text-1;
             width: 310px;
             height: 100%;
+            color: $light-text-1;
             border-style: none;
             border-radius: 5px;
             padding: 0 15px 0 15px;
@@ -140,7 +136,7 @@ section#wordpage.ctm
     }
     input
     {
-        font-family: Morse2o;
+        font-family: "Morse2o";
         font-size: 3em;
         letter-spacing: 6px;
     }
@@ -151,7 +147,7 @@ section#wordpage.mtc
 {
     .char
     {
-        font-family: Morse2o;
+        font-family: "Morse2o";
         font-size: 6.35em;
         letter-spacing: 6px;
     }
